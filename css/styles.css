@@ -1,0 +1,101 @@
+:root {
+  --white: white;
+  --black: black;
+}
+
+body, html {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  height: 35px;
+  padding: 5px 8px;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header nav .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+}
+header nav .nav-left #title {
+  text-decoration: underline;
+}
+header nav .theme-toggler {
+  display: flex;
+  gap: 5px;
+  width: auto;
+}
+header nav .theme-toggler li {
+  height: 12px;
+  width: 12px;
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+header nav .theme-toggler #light {
+  background-color: white;
+}
+header nav .theme-toggler #dark {
+  background-color: black;
+}
+
+.hero {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  display: grid;
+  place-content: center;
+}
+.hero .img_banner {
+  width: 100%;
+  height: 90%;
+}
+.hero .img_banner img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.projects {
+  width: 100%;
+}
+.projects .artists, .projects .collection {
+  width: 40%;
+}
+.projects .date-range, .projects .download-link {
+  width: 10%;
+}
+.projects .download-link {
+  text-align: right;
+}
+.projects .project-info {
+  height: 35px;
+  padding: 5px 8px;
+  width: 100%;
+}
+.projects .project-info ul {
+  width: 100%;
+  display: flex;
+}
+.projects .project {
+  height: 35px;
+  padding: 5px 8px;
+  width: 100%;
+}
+.projects .project ul {
+  display: flex;
+}/*# sourceMappingURL=styles.css.map */

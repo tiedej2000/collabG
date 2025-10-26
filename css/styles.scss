@@ -1,0 +1,119 @@
+:root{
+    --white: white;
+    --black: black;
+}
+
+$font: "Noto Sans", sans-serif;
+
+body, html{
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    height: 35px;
+    padding: 5px 8px;
+    width: 100%;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .nav-left{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: auto;
+
+            #title{
+                text-decoration: underline;
+            }
+        }
+
+        .theme-toggler{
+            display: flex;
+            gap: 5px;
+            width: auto;
+
+            li{
+                height: 12px;
+                width: 12px;
+                border: 1px solid black;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            #light{
+                background-color: white;
+            }
+
+            #dark{
+                background-color: black;
+            }
+        }
+    }
+}
+
+.hero{
+    height: calc(100vh - 70px);
+    width: 100vw;
+    display: grid;
+    place-content: center;
+
+    .img_banner{
+        width: 100%;
+        height: 90%;
+       
+
+        img{
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.projects{
+    width: 100%;
+
+    .artists, .collection{
+        width: 40%;
+    }
+
+    .date-range, .download-link{
+        width: 10%;
+    }
+
+    .download-link{
+        text-align: right;
+    }
+
+    .project-info{
+        height: 35px;
+        padding: 5px 8px;
+        width: 100%;
+
+        ul{
+            width: 100%;
+            display: flex;
+        }
+    }
+
+    .project{
+        height: 35px;
+        padding: 5px 8px;
+        width: 100%;
+
+        ul{
+            display: flex;
+        }
+    }
+}
