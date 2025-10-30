@@ -71,7 +71,6 @@ header{
     .img_banner{
         width: 100%;
         height: 90%;
-       
 
         img{
             object-fit: contain;
@@ -83,9 +82,35 @@ header{
 
 .projects{
     width: 100%;
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+
+    .gallery{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-content: center;
+        pointer-events: none;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(0.55);
+        }
+    }
 
     .artists, .collection{
         width: 40%;
+    }
+
+    .artists:hover{
+        color: blue;
     }
 
     .date-range, .download-link{
@@ -108,12 +133,23 @@ header{
     }
 
     .project{
-        height: 35px;
-        padding: 5px 8px;
-        width: 100%;
-
         ul{
             display: flex;
+            height: 35px;
+            padding: 5px 8px;
+            width: 100%;
+        }
+
+        .project-list{
+            display: flex;
+            flex-direction: column;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+
+            &.active{
+                max-height: 420px;
+            }
         }
     }
 }
